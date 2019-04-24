@@ -2,7 +2,7 @@
 require 'pry'
 class School
 
-  attr_reader :school_name, :roster
+  attr_accessor :school_name, :roster
 
   def initialize(school_name) #only one parameter, automatically starts with a blank roster
     @school_name = school_name
