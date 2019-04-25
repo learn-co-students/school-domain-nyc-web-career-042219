@@ -6,9 +6,9 @@ class School
      @name = name
      @roster = {}
    end
-   
+
   # def add_student(name, grade)
-  #   @name = name 
+  #   @name = name
   #   @grade = grade
   #   if @roster.include?(grade) == false
   #     @roster[grade] = []
@@ -17,7 +17,7 @@ class School
   #   # roster[grade] = []
   #   # roster[grade] << name
   # end
-  
+
   def add_student(name, grade)
   if @roster[grade]
     @roster[grade] << name
@@ -26,24 +26,25 @@ class School
     @roster[grade] << name
   end
 end
-  
+
   def grade(grade)
     roster[grade]
   end
- 
 
-  def sort(grade, student)
-  # school.sort gives an alphzd. array of student names within a hash, where the student names are the values and grade is the key
+
+  def sort
+  # school.sort gives an alphzd. array of student names within a hash,
+  #        where the student names are the values and grade is the key
   # => { key (grade) => ["value", "value"]}
   # can't just shovel into a hash so easily
-  
+
     sorted = {}
- 
-    roster.each do |grade, student|
-      sorted.store[:grade, :student]
-      
-    
-  end
-  end
-  
+
+    roster.each do |grade, students|
+      # sorted.store[:grade, :student]
+      # sorted << [grade][students]
+      sorted[grade] = students.sort
+      end
+      sorted
+    end
 end
